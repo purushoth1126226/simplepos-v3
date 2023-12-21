@@ -71,3 +71,13 @@
     "minimum-stability": "stable",
     "prefer-stable": true
 }
+"scripts": {
+    "post-install-cmd": [
+        "Illuminate\\Foundation\\ComposerScripts::postInstall",
+        "@php artisan package:discover --ansi"
+    ],
+    "post-update-cmd": [
+        "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+        "@php artisan package:discover --ansi"
+    ]
+},
